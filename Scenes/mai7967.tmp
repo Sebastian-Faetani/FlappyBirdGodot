@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://cjff4ycngtu0u"]
+
+[ext_resource type="PackedScene" uid="uid://dimtyfnqrst1b" path="res://Scenes/flappy_dude.tscn" id="1_tw8nj"]
+[ext_resource type="Texture2D" uid="uid://bwf5i0qyei8n0" path="res://Assets/background-day.png" id="1_w0mau"]
+[ext_resource type="PackedScene" uid="uid://bw431phhqn3pd" path="res://Scenes/ground.tscn" id="3_dirn1"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Background" type="Sprite2D" parent="."]
+texture = ExtResource("1_w0mau")
+
+[node name="flappyDude" parent="." instance=ExtResource("1_tw8nj")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Ground" parent="." instance=ExtResource("3_dirn1")]
+position = Vector2(24, 200)
+speed = -150
